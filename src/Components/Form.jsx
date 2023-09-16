@@ -35,28 +35,24 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form style={{textTransform:"uppercase"}} onSubmit={handleSubmit}>
           <label>Nombre Completo: </label>
           <input
             type="text"
             name="nombre"
             value={formData.nombre}
             onChange={handleChange}
+            style={{height:"18px"}}
           />
-        </div>
-        <br></br>
-        <div>
           <label>Email: </label>
           <input
             type="text"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            style={{height:"18px"}}
           />
-        </div>
-        <br></br>
-        <button type="submit">Enviar</button>
+        <button className="favButton" style={{borderRadius:"4px", backgroundColor: "lightgrey", textTransform:"uppercase"}} type="submit">Enviar</button>
       </form>
       {error && <p>{error}</p>}
       {mensaje && <p>{mensaje}</p>}

@@ -5,7 +5,7 @@ import { useUserContext } from '../Components/utils/global.context'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { theme, toggleTheme} = useUserContext();
+  const { theme} = useUserContext();
   const themeClass = theme === "light" ? "light" : "dark";
 
   const {users} = useUserContext()

@@ -10,15 +10,21 @@ const Navbar = () => {
   const themeClass = theme === "light" ? "light" : "dark";
 
   return (
-    <nav className={toggleTheme}>
+    <nav style={{ display: 'flex', justifyContent: 'space-evenly', width: 'auto' }} className={themeClass}>
       <img src="./DH.ico" alt="" />
         <Link to='/'>Home</Link>
-        <br />
         <Link to='/favs'>Favoritos</Link>
-        <br/>
-        <Link to="/contact">Contacto</Link>
-        <br/>  
-        <button className={themeClass} onClick={toggleTheme}>cambio de tema</button>
+        <Link to="/contacto">Contacto</Link> 
+        <button style={{
+          width:'50px',
+          border: '0px',
+          borderRadius: '10%',
+          boxShadow: '1px -1px 11px 0px rgba(204,204,204,1)',
+          color: theme === 'light' ? 'black' : 'yellow', 
+          backgroundColor: 'transparent', 
+        }} className={themeClass} onClick={toggleTheme}>
+          {theme === "light" ? "🌙" : "☀️"}
+          </button>
     </nav>
     
   )

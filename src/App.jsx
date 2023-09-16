@@ -7,14 +7,17 @@ import Home from "./Routes/Home";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
+import { useUserContext } from "./Components/utils/global.context";
 
 
 
 
 function App() {
+  const {theme} = useUserContext();
+  const appClass = theme === "light" ? "light" : "dark";
   return (
     /*<Router>*/
-      <div className="App">
+      <div className={`App ${appClass}`}>
           <Navbar/>
           <Routes>
           <Route path="/" element={<Home/>} />
