@@ -4,7 +4,7 @@ import { useContext, createContext, useState, useReducer, useEffect } from "reac
 const UserContext = createContext();
 const localFavs = JSON.parse(localStorage.getItem("favs"));
 const initialFavState = localFavs ? localFavs : [];
-const initialTheme = "ligth";
+const initialTheme = "light";
 
 const userReducer = (state, action) => {
     switch (action.type) {
